@@ -1,0 +1,50 @@
+@use 'utils/index' as *;
+@use 'components/header';
+@use 'components/tipCalcCard';
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+
+    font-family: $mainFont;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: $veryLightGrayishCyan;
+
+    @include flex(center, center);
+    flex-direction: column;
+}
+
+.read-only {
+    visibility: hidden;
+    width: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.5rem;
+}

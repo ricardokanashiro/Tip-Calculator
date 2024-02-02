@@ -23,26 +23,45 @@
 
         <section class="inputCard__billAmount">
 
-          <label for="">Bill</label>
+          <label for="billAmountInput">Bill</label>
 
-          <input type="number" id="">
+          <div class="billAmount__inputWrapper">
+            <img src="images/icon-dollar.svg" alt="cash icon">
+            <input type="number" id="billAmountInput" placeholder="0">
+          </div>
 
         </section>
 
         <section class="inputCard__selectTip">
-          
-          <button class="selectTip__tipButton">5%</button>
-          <button class="selectTip__tipButton">10%</button>
-          <button class="selectTip__tipButton">15%</button>
-          <button class="selectTip__tipButton">25%</button>
-          <button class="selectTip__tipButton">50%</button>
 
-          <label for="" class="read-only">Custom Tip</label>
-          <input type="number" name="" id="">
+          <label>Select Tip</label>
+
+          <div class="selectTip__button-wrapper">
+
+            <button class="selectTip__tipButton">5%</button>
+
+            <button class="selectTip__tipButton">10%</button>
+
+            <button class="selectTip__tipButton">15%</button>
+
+            <button class="selectTip__tipButton">25%</button>
+
+            <button class="selectTip__tipButton">50%</button>
+
+            <input type="number" id="customTip" placeholder="CUSTOM">
+
+          </div>
 
         </section>
 
         <section class="inputCard__peopleNum">
+
+          <label for="peopleNumInput">Number of People</label>
+
+          <div class="peopleNum__InputWrapper">
+            <img src="images/icon-person.svg" alt="people icon">
+            <input type="number" id="peopleNumInput" placeholder="0">
+          </div>
 
         </section>
 
@@ -85,7 +104,7 @@
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Ricardo Kanashiro</a>.
+    Coded by <a href="https://github.com/ricardokanashiro" target="_blank">Ricardo Kanashiro</a>.
   </footer>
 </body>
 </html>
