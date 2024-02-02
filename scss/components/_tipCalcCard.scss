@@ -1,0 +1,139 @@
+@use '../utils/index' as *;
+
+/* Configurações em MAIN */
+
+main {
+    width: 100%;
+    @include flex(center, center);
+}
+
+/* Configurações em Tip Calc Card */
+
+.tipCalcCard {
+    background-color: white;
+    width: 60%;
+    padding: 3rem;
+    gap: 5rem;
+
+    @include flex(center, stretch);
+}
+
+/* Configurações em Input Card  */
+
+.tipCalcCard__inputCard {
+    width: 50%;
+
+    input {
+        display: block;
+    }
+}
+
+.inputCard__billAmount,
+.inputCard__selectTip {
+    margin-bottom: 4rem;
+}
+
+.selectTip__button-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.2rem;
+
+    margin-top: 2rem;
+
+    button, input {
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        width: 30%;
+        min-width: 8rem;
+        padding: .8rem;
+        border-radius: .4rem;
+
+        font-weight: 700;
+        text-align: center;
+    }
+
+    button {
+        background-color: $veryDarkCyan;
+        color: white;
+        cursor: pointer;
+    }
+
+    input[type="number"] {
+        outline: none;
+        background-color: rgb(248, 248, 248);
+    }
+}
+
+.billAmount__inputWrapper, .peopleNum__InputWrapper {
+    margin-top: 2rem;
+
+    @include flex(center, center);
+    gap: 1rem;
+
+    img {
+        height: 1.6rem;
+    }
+
+    input {
+        outline: none;
+        flex-grow: 1;
+        text-align: right;
+
+        font-weight: 700;
+    }
+
+    input::placeholder {
+        color: $grayishCyan;
+    }
+}
+
+/* Configurações em Result Card */
+
+.tipCalcCard__resultCard {
+    width: 50%;
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: $veryDarkCyan;
+
+    @include flex(space-between, space-between);
+    flex-flow: column nowrap;
+
+    button {
+        background-color: $cyan;
+        color: $veryDarkCyan;
+        font-weight: 700;
+        font-size: 1.7rem;
+        padding: .7rem;
+        border-radius: .7rem;
+        cursor: pointer;
+    }
+}
+
+.amountsCard__tipAmount, .amountsCard__totalAmount {
+    width: 100%;
+
+    @include flex(space-between, center);
+
+    .tipAmount__textWrapper, .totalAmount__textWrapper {
+        p:nth-child(1) {
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        p:nth-child(2) {
+            color: $grayishCyan;
+        }
+    }
+
+    .tipAmount__number, .totalAmount__number {
+        color: $cyan;
+        font-weight: 700;
+        font-size: 3rem;
+    }
+}
+
+.amountsCard__tipAmount {
+    margin-bottom: 2.6rem;
+}

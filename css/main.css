@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+header {
+  width: 100%;
+  margin-bottom: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo p {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1.3rem;
+  color: hsl(183, 100%, 15%);
+}
+
+/* Configurações em MAIN */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Configurações em Tip Calc Card */
+.tipCalcCard {
+  background-color: white;
+  width: 60%;
+  padding: 3rem;
+  gap: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Configurações em Input Card  */
+.tipCalcCard__inputCard {
+  width: 50%;
+}
+.tipCalcCard__inputCard input {
+  display: block;
+}
+
+.inputCard__billAmount,
+.inputCard__selectTip {
+  margin-bottom: 4rem;
+}
+
+.selectTip__button-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+.selectTip__button-wrapper button, .selectTip__button-wrapper input {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 30%;
+  min-width: 8rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  text-align: center;
+}
+.selectTip__button-wrapper button {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  cursor: pointer;
+}
+.selectTip__button-wrapper input[type=number] {
+  outline: none;
+  background-color: rgb(248, 248, 248);
+}
+
+.billAmount__inputWrapper, .peopleNum__InputWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.billAmount__inputWrapper img, .peopleNum__InputWrapper img {
+  height: 1.6rem;
+}
+.billAmount__inputWrapper input, .peopleNum__InputWrapper input {
+  outline: none;
+  flex-grow: 1;
+  text-align: right;
+  font-weight: 700;
+}
+.billAmount__inputWrapper input::placeholder, .peopleNum__InputWrapper input::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+/* Configurações em Result Card */
+.tipCalcCard__resultCard {
+  width: 50%;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-flow: column nowrap;
+}
+.tipCalcCard__resultCard button {
+  background-color: rgb(38, 195, 174);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-size: 1.7rem;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.amountsCard__tipAmount, .amountsCard__totalAmount {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.amountsCard__tipAmount .tipAmount__textWrapper p:nth-child(1), .amountsCard__tipAmount .totalAmount__textWrapper p:nth-child(1), .amountsCard__totalAmount .tipAmount__textWrapper p:nth-child(1), .amountsCard__totalAmount .totalAmount__textWrapper p:nth-child(1) {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.amountsCard__tipAmount .tipAmount__textWrapper p:nth-child(2), .amountsCard__tipAmount .totalAmount__textWrapper p:nth-child(2), .amountsCard__totalAmount .tipAmount__textWrapper p:nth-child(2), .amountsCard__totalAmount .totalAmount__textWrapper p:nth-child(2) {
+  color: hsl(184, 14%, 56%);
+}
+.amountsCard__tipAmount .tipAmount__number, .amountsCard__tipAmount .totalAmount__number, .amountsCard__totalAmount .tipAmount__number, .amountsCard__totalAmount .totalAmount__number {
+  color: rgb(38, 195, 174);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.amountsCard__tipAmount {
+  margin-bottom: 2.6rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(189, 41%, 97%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.read-only {
+  visibility: hidden;
+  width: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */
