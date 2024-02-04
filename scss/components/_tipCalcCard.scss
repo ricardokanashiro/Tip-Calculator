@@ -11,11 +11,17 @@ main {
 
 .tipCalcCard {
     background-color: white;
-    width: 60%;
+    width: max(60%, 60rem);
     padding: 3rem;
     gap: 5rem;
 
     @include flex(center, stretch);
+
+    @include phoneScreenDown {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Configurações em Input Card  */
@@ -25,6 +31,10 @@ main {
 
     input {
         display: block;
+    }
+
+    @include phoneScreenDown {
+        width: 100%;
     }
 }
 
@@ -108,12 +118,21 @@ main {
         border-radius: .7rem;
         cursor: pointer;
     }
+
+    @include phoneScreenDown {
+        width: 100%;
+
+        button {
+            margin-top: 3rem;
+        }
+    }
 }
 
 .amountsCard__tipAmount, .amountsCard__totalAmount {
     width: 100%;
 
     @include flex(space-between, center);
+    gap: 1rem;
 
     .tipAmount__textWrapper, .totalAmount__textWrapper {
         p:nth-child(1) {
@@ -131,6 +150,7 @@ main {
         color: $cyan;
         font-weight: 700;
         font-size: 3rem;
+        font-size: clamp(2rem, 1rem + 1.2vw, 3.5rem);
     }
 }
 

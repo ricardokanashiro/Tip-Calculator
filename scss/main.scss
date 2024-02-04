@@ -23,7 +23,7 @@ html {
 body {
     width: 100%;
     height: 100%;
-    background-color: $veryLightGrayishCyan;
+    background-color: $lightGrayishCyan;
 
     @include flex(center, center);
     flex-direction: column;

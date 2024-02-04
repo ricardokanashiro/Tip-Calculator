@@ -27,12 +27,19 @@ main {
 /* Configurações em Tip Calc Card */
 .tipCalcCard {
   background-color: white;
-  width: 60%;
+  width: max(60%, 60rem);
   padding: 3rem;
   gap: 5rem;
   display: flex;
   justify-content: center;
   align-items: stretch;
+}
+@media (max-width: 640px) {
+  .tipCalcCard {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* Configurações em Input Card  */
@@ -41,6 +48,11 @@ main {
 }
 .tipCalcCard__inputCard input {
   display: block;
+}
+@media (max-width: 640px) {
+  .tipCalcCard__inputCard {
+    width: 100%;
+  }
 }
 
 .inputCard__billAmount,
@@ -114,12 +126,21 @@ main {
   border-radius: 0.7rem;
   cursor: pointer;
 }
+@media (max-width: 640px) {
+  .tipCalcCard__resultCard {
+    width: 100%;
+  }
+  .tipCalcCard__resultCard button {
+    margin-top: 3rem;
+  }
+}
 
 .amountsCard__tipAmount, .amountsCard__totalAmount {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 .amountsCard__tipAmount .tipAmount__textWrapper p:nth-child(1), .amountsCard__tipAmount .totalAmount__textWrapper p:nth-child(1), .amountsCard__totalAmount .tipAmount__textWrapper p:nth-child(1), .amountsCard__totalAmount .totalAmount__textWrapper p:nth-child(1) {
   color: white;
@@ -133,6 +154,7 @@ main {
   color: rgb(38, 195, 174);
   font-weight: 700;
   font-size: 3rem;
+  font-size: clamp(2rem, 1rem + 1.2vw, 3.5rem);
 }
 
 .amountsCard__tipAmount {
@@ -159,7 +181,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(185, 41%, 84%);
   display: flex;
   justify-content: center;
   align-items: center;
