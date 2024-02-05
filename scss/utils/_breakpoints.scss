@@ -3,3 +3,9 @@
         @content;
     }
 }
+
+@mixin extraSmallScreensDown {
+    @media(max-width: 350px) {
+        @content;
+    }
+}

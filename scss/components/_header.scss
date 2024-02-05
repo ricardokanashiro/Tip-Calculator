@@ -3,6 +3,7 @@
 header {
     width: 100%;
     margin-bottom: 7rem;
+    margin-top: 7rem;
     
     @include flex(center, center)
 }

@@ -13,9 +13,10 @@ main {
     background-color: white;
     width: max(60%, 60rem);
     padding: 3rem;
-    gap: 5rem;
-
+    border-radius: 1rem;
+    
     @include flex(center, stretch);
+    gap: 5rem;
 
     @include phoneScreenDown {
         width: 90%;
@@ -67,11 +68,19 @@ main {
         background-color: $veryDarkCyan;
         color: white;
         cursor: pointer;
+        transition-property: color, background-color;
+        transition-duration: 200ms;
+        transition-timing-function: ease-out;
     }
 
     input[type="number"] {
         outline: none;
         background-color: rgb(248, 248, 248);
+    }
+
+    .selectTip__tipButton--active {
+        color: $veryDarkCyan;
+        background-color: $cyan;
     }
 }
 
@@ -151,6 +160,10 @@ main {
         font-weight: 700;
         font-size: 3rem;
         font-size: clamp(2rem, 1rem + 1.2vw, 3.5rem);
+    }
+
+    @include extraSmallScreensDown {
+        flex-direction: column;
     }
 }
 
