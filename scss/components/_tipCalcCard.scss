@@ -74,6 +74,11 @@ main {
         border: 2px solid transparent;
     }
 
+    button:hover {
+        background-color: rgb(34, 221, 196);
+        color: $veryDarkCyan;
+    }
+
     input[type="number"] {
         outline: none;
         border: 2px solid transparent;

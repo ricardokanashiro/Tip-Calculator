@@ -87,6 +87,10 @@ main {
   transition-timing-function: ease-out;
   border: 2px solid transparent;
 }
+.selectTip__button-wrapper button:hover {
+  background-color: rgb(34, 221, 196);
+  color: hsl(183, 100%, 15%);
+}
 .selectTip__button-wrapper input[type=number] {
   outline: none;
   border: 2px solid transparent;
