@@ -101,6 +101,7 @@ main {
     border: 2px solid transparent;
     border-radius: .4rem;
     background-color: $veryLightGrayishCyan;
+    position: relative;
 
     @include flex(center, center);
     gap: 1rem;
@@ -120,6 +121,20 @@ main {
     input::placeholder {
         color: $grayishCyan;
     }
+
+    span {
+        color: red;
+        font-weight: 700;
+        letter-spacing: .2rem;
+        position: absolute;
+        right: 0;
+        top: -2rem;
+        display: none;
+    }
+}
+
+.inputWrapper--active {
+    border: 2px solid red;
 }
 
 .billAmount__inputWrapper:focus-within, .peopleNum__InputWrapper:focus-within {

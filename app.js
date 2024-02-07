@@ -35,12 +35,12 @@ function calcTip() {
 
     let billValue = Number(billAmountInput.value);
     let peopleNum = Number(peopleNumInput.value);
-    let tipValue = 0;
+    let tipValue = null;
 
-    if(customTipInput.value == '' && selectedButton) {
-        tipValue = Number(selectedButton.dataset.percentage)/100;
+    if(customTipInput.value === '' && selectedButton) {
+        tipValue = Number(selectedButton.dataset.percentage) / 100;
     } else if(!customTipInput.value == '' && !selectedButton) {
-        tipValue = Number(customTipInput.value)/100;
+        tipValue = Number(customTipInput.value) / 100;
     }
 
     resetButton.classList.remove('resultCard__resetButton--active');
@@ -49,7 +49,7 @@ function calcTip() {
         resetButton.classList.add('resultCard__resetButton--active');
     }
 
-    if(tipValue && billValue && peopleNum) {
+    if((tipValue ||tipValue === 0) && billValue && peopleNum) {
         let tipTotal = (billValue * tipValue);
         let total = (billValue + tipTotal);
 
@@ -80,12 +80,34 @@ function resetValues(event) {
 
 }
 
+function checkIfIsZero(event) {
+    let errorSpan = event.target.parentNode.querySelector('span');
+
+    if(event.target.value == 0) {
+        event.target.parentNode.classList.add('inputWrapper--active');
+        errorSpan.style.display = "block";
+    } else if(event.target.parentNode.classList.contains('inputWrapper--active')) {
+        event.target.parentNode.classList.remove('inputWrapper--active');
+        errorSpan.style.display = "none";
+    } else {
+        return;
+    }
+}
+
 tipButtons.forEach(button => button.addEventListener('click', (event) => selectTipButton(event)));
 
 customTipInput.addEventListener('focus', deselectTipButton);
 
-billAmountInput.addEventListener('blur', calcTip);
+billAmountInput.addEventListener('blur', (event) => {
+    calcTip();
+    checkIfIsZero(event);   
+});
+
+peopleNumInput.addEventListener('blur', (event) => {
+    calcTip();
+    checkIfIsZero(event);   
+});
+
 customTipInput.addEventListener('blur', calcTip);
-peopleNumInput.addEventListener('blur', calcTip);
 
 resetButton.addEventListener('click', (event) => resetValues(event));
