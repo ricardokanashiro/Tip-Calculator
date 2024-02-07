@@ -1,16 +1,3 @@
-<style>
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .container2 {
-    display: flex;
-    align-items: center;
-  }
-</style>
-
 # Desafio Front-end - Tip Calculator
 
 ## Sumário:
