@@ -28,11 +28,11 @@ Os usuários devem ser capazes de:
 ### Links
 
 <div class="container">
-  - Solução no site: <a href=""><img height="50px" src="./images/readmeAssets/frontendmentorlogo.png"></a>
+  - Solução no site: <a href="https://www.frontendmentor.io/solutions/tip-calculator-html-scss-vanilla-js-5XrKpCnNis">Clique Aqui</a>
 </div>
 
 <div class="container">
-  - Live Preview do desafio: <a href="https://github.com/ricardokanashiro/Tip-Calculato"><img height="40px" src="./images/readmeAssets/githublogo.png"></a>
+  - Live Preview do desafio: <a href="https://github.com/ricardokanashiro/Tip-Calculato">Clique Aqui</a>
 </div>
 
 
